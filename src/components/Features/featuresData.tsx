@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "Structural Steel",
     paragraph:
-      "The building is framed and roofed with industrial grade metal ensuring safety of unit contents. It also features a weather tight seal.",
+      "The Toy Locker, LLC's buildings are framed and roofed with industrial grade metal ensuring safety of unit contents. They also feature a weather tight seal.",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
     ),
     title: "Heavy Duty Foundation",
     paragraph:
-      "The building's foundation was poured with high grade material allowing for maximum weight compacity.",
+      "The foundations of Toy Locker, LLC's buildings were poured with high grade material, allowing for maximum weight capacity.",
   },
   {
     id: 1,

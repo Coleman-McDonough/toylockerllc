@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="16 Foot Tall Storage Units"
-            paragraph="These units are perfect for storing Boats, RV's, etc. that you will have access to all year round. Don't miss out on your chance to reserve your unit today! Please contact us for further information."
+            paragraph="Toy Locker, LLC offers 16 foot tall storage units, perfect for storing Boats, RV's, etc. that you will have access to all year round. Don't miss out on your chance to reserve your unit today! Please contact us for further information."
             center
           />
 

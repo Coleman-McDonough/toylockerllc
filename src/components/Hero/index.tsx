@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="absolute inset-0 z-[-1]">
           <Image
             src="/images/hero/tl_drone.png" // Adjust the path to your image
-            alt="Background Image Description"
+            alt="Arial view of Toy Locker, LLC storage facility"
             layout="fill"
             objectFit="cover"
             objectPosition="top"
@@ -24,15 +24,15 @@ const Hero = () => {
               <div className="w-full px-4">
                 <div className="mx-auto my-auto max-w-[800px] rounded-md bg-gray-900 bg-opacity-80 p-6 text-center">
                   <h1 className="dark:text-white mb-1 text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                    New Hampshire&apos;s{" "}
                     <span className="rounded-md bg-white bg-opacity-70 px-1 text-primary">
                       Tallest
                     </span>{" "}
-                    Storage Units
+                    Storage Units in New Hampshire
                   </h1>
                   <p className="text-base!leading-relaxed dark:text-body-color-dark mb-12 font-bold text-white sm:text-xl md:text-2xl">
-                    16-foot storage units perfect for RVs and boats. Contact us
-                    for leasing and availability.
+                    At 16-feet tall, Toy Locker, LLC offers the tallest personal
+                    storage units in New Hampshire. These storage units perfect
+                    for RVs and boats. Contact us for leasing and availability.
                   </p>
                   <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                     <Link
