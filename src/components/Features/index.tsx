@@ -8,7 +8,7 @@ const Features = () => {
       <section id="features" className="py-8 lg:py-16">
         <div className="container">
           <SectionTitle
-            title="Unit Specs"
+            title="16 Foot Tall Storage Units"
             paragraph="These units are perfect for storing Boats, RV's, etc. that you will have access to all year round. Don't miss out on your chance to reserve your unit today! Please contact us for further information."
             center
           />

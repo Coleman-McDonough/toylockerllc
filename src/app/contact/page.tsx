@@ -4,19 +4,21 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Contact Page for Startup Nextjs Template",
+  title: "Contact Page | Toy Locker, LLC",
+  description:
+    "Get in touch with Toy Locker in Ossipee, NH. Our storage units, ideal for RVs and boats, stand 16 feet tall and are conveniently located on Route 16. Contact us at 978-375-7001 for more information.",
   // other metadata
 };
 
 const ContactPage = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
-
+      <div>
+        <Breadcrumb
+          pageName="Contact Page"
+          description="Get in touch with Toy Locker in Ossipee, NH. Our storage units, ideal for RVs and boats, stand 16 feet tall and are conveniently located on Route 16. Contact us at 978-375-7001 for more information. "
+        />
+      </div>
       <Contact />
     </>
   );

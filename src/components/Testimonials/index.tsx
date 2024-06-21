@@ -6,12 +6,12 @@ const testimonialData: Testimonial[] = [
   {
     id: 1,
     image: "/images/testimonials/cpm_logo.png",
-    url: "/",
+    url: "https://www.cpmcdonoughconstructioncorp.com/",
   },
   {
     id: 2,
     image: "/images/testimonials/snhip.jpg",
-    url: "/",
+    url: "https://www.snhindustrialpark.com/",
   },
 ];
 
