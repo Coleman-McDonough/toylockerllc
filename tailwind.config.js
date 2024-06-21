@@ -7,7 +7,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
+  darkMode: "false",
   theme: {
     container: {
       center: true,
@@ -40,7 +40,7 @@ module.exports = {
         white: "#FFFFFF",
         black: "#121723",
         dark: "#1D2430",
-        primary: "#4A6CF7",
+        primary: "#063646",
         yellow: "#FBB040",
         "bg-color-dark": "#171C28",
         "body-color": {

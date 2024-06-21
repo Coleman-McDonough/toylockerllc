@@ -5,44 +5,27 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
+    image: "/images/testimonials/cpm_logo.png",
+    url: "/",
   },
   {
     id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
+    image: "/images/testimonials/snhip.jpg",
+    url: "/",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="dark:bg-bg-color-dark relative z-10 bg-gray-light md:py-8 lg:py-12">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Trusted By"
+          paragraph="Our affiliate partners"
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col justify-center gap-x-8 gap-y-10 md:flex-row">
           {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
           ))}

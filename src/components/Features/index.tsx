@@ -5,15 +5,15 @@ import featuresData from "./featuresData";
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
+      <section id="features" className="py-8 lg:py-16">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Unit Specs"
+            paragraph="These units are perfect for storing Boats, RV's, etc. that you will have access to all year round. Don't miss out on your chance to reserve your unit today! Please contact us for further information."
             center
           />
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mt-16 grid grid-cols-1 gap-x-8 gap-y-14 md:-mt-8 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}
