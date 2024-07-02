@@ -18,11 +18,11 @@ const BlogDetailsPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="dark:text-white mb-8 text-3xl font-bold leading-tight text-black sm:text-4xl sm:leading-tight">
                   10 amazing sites to download stock photos & digital assets for
                   free
                 </h2>
-                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+                <div className="dark:border-white dark:border-opacity-10 mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
@@ -123,7 +123,7 @@ const BlogDetailsPage = () => {
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Quis enim lobortis scelerisque fermentum. Neque
                     sodales ut etiam sit amet. Ligula ullamcorper
-                    <strong className="text-primary dark:text-white">
+                    <strong className="dark:text-white text-primary">
                       malesuada
                     </strong>
                     proin libero nunc consequat interdum varius. Quam
@@ -132,14 +132,14 @@ const BlogDetailsPage = () => {
                   </p>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Semper auctor neque vitae tempus quam pellentesque nec.
-                    <span className="text-primary underline dark:text-white">
+                    <span className="dark:text-white text-primary underline">
                       Amet dictum sit amet justo
                     </span>
                     donec enim diam. Varius sit amet mattis vulputate enim nulla
                     aliquet porttitor. Odio pellentesque diam volutpat commodo
                     sed.
                   </p>
-                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                  <h3 className="font-xl dark:text-white mb-10 font-bold leading-tight text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Digital marketplace for Ui/Ux designers.
                   </h3>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
@@ -233,7 +233,7 @@ const BlogDetailsPage = () => {
                           cx="37.5"
                           cy="37.5"
                           r="37.5"
-                          fill="#4A6CF7"
+                          fill="#063646"
                         />
                         <mask
                           id="mask0_111:596"
@@ -249,7 +249,7 @@ const BlogDetailsPage = () => {
                             cx="37.5"
                             cy="37.5"
                             r="37.5"
-                            fill="#4A6CF7"
+                            fill="#063646"
                           />
                         </mask>
                         <g mask="url(#mask0_111:596)">
