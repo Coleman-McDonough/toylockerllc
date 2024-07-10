@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph=""
           center
           width="665px"
         />
@@ -59,43 +59,97 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
+            packageName="Building A"
             price={isMonthly ? "40" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle=""
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList
+              text="10' x 10'"
+              status="active"
+              price={isMonthly ? "99" : "1,188"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="12' x 20'"
+              status="active"
+              price={isMonthly ? "180" : "2,160"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="12' x 25'"
+              status="active"
+              price={isMonthly ? "225" : "2,700"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="12' x 30'"
+              status="active"
+              price={isMonthly ? "270" : "3,240"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="12' x 35'"
+              status="inactive"
+              price={isMonthly ? "315" : "3,780"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="12' x 40'"
+              status="inactive"
+              price={isMonthly ? "360" : "4,320"}
+              isMonthly={isMonthly}
+            />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
+            packageName="Building B"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle=""
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList
+              text="10' x 10'"
+              status="active"
+              price={isMonthly ? "99" : "1,188"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="14' x 24.4'"
+              status="active"
+              price={isMonthly ? "220" : "2,640"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="14' x 29'"
+              status="active"
+              price={isMonthly ? "261" : "3,132"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="14' x 33.5'"
+              status="active"
+              price={isMonthly ? "302" : "3,624"}
+              isMonthly={isMonthly}
+            />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
+            packageName="Building C"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle=""
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList
+              text="14' x 19'"
+              status="active"
+              price={isMonthly ? "171" : "2,052"}
+              isMonthly={isMonthly}
+            />
+            <OfferList
+              text="14' x 38.6'"
+              status="active"
+              price={isMonthly ? "347" : "4,164"}
+              isMonthly={isMonthly}
+            />
           </PricingBox>
         </div>
       </div>
