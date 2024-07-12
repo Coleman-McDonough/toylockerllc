@@ -1,7 +1,56 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState(""); // State for form submission status
+  const [errorMessage, setErrorMessage] = useState(""); // State for error message
+  const [successMessage, setSuccessMessage] = useState(""); // State for success message
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    setErrorMessage(""); // Reset error message
+    setSuccessMessage(""); // Reset success message
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setStatus(""); // Clear status
+        setSuccessMessage(
+          "Your message has been sent successfully! We'll get back to you ASAP.",
+        );
+        setFormData({ name: "", email: "", message: "" }); // Reset form fields
+      } else {
+        setStatus(""); // Clear status
+        setErrorMessage(
+          result.details || "An error occurred while sending the email.",
+        ); // Set error message if available
+      }
+    } catch (error) {
+      setStatus(""); // Clear status
+      setErrorMessage(error.message || "An unknown error occurred.");
+    }
+  };
+
   return (
     <section id="contact" className="overflow-hidden py-6">
       <div className="container mx-auto">
@@ -17,7 +66,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -29,6 +78,9 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         placeholder="Enter your name"
                         className="border-stroke dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
                       />
@@ -44,6 +96,9 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="Enter your email"
                         className="border-stroke dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
                       />
@@ -59,6 +114,8 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         rows={5}
                         placeholder="Enter your Message"
                         className="border-stroke dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
@@ -67,14 +124,27 @@ const Contact = () => {
                   </div>
                   <div className="w-full px-4">
                     <button
-                      onClick={() => alert("Coming Soon!")}
+                      type="submit"
                       className="dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90"
+                      disabled={status === "Sending..."} // Disable button while sending
                     >
-                      Submit Ticket
+                      {status === "Sending..." ? "Sending..." : "Submit Ticket"}{" "}
+                      {/* Change button text based on status */}
                     </button>
                   </div>
                 </div>
               </form>
+              {status && <p className="mt-4 text-sm font-medium">{status}</p>}
+              {successMessage && (
+                <p className="mt-4 text-sm font-medium text-green-600">
+                  {successMessage}
+                </p>
+              )}
+              {errorMessage && (
+                <p className="mt-2 text-sm font-medium text-red-600">
+                  {errorMessage}
+                </p>
+              )}
             </div>
           </div>
         </div>
