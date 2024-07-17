@@ -1,58 +1,11 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import SectionTitle from "../Common/SectionTitle"
 import OfferList from "./OfferList"
 import PricingBox from "./PricingBox"
-import axios from "axios"
-import { ToyLockerUnit } from "@/app/models/ToyLockerUnit"
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true)
-  const [units, setUnits] = useState<ToyLockerUnit[]>([])
-
-  async function fetchToyLockerData() {
-    try {
-      const response = await axios.get("/api/units")
-      return response.data
-    } catch (error) {
-      console.error("Error fetching unit data:", error)
-      throw error
-    }
-  }
-
-  useEffect(() => {
-    async function fetchData() {
-      const data = await fetchToyLockerData()
-      setUnits(data)
-    }
-
-    fetchData()
-  }, [])
-
-  // Filter vacant units
-  const vacantUnits = units.filter(
-    (unit) =>
-      !unit.isRented &&
-      !unit.isReserved &&
-      !unit.hasPaid &&
-      !unit.hasSigned &&
-      !unit.isVip,
-  )
-
-  // Group vacant units by building and size
-  const groupedUnits = vacantUnits.reduce((acc, unit) => {
-    const building = unit.unitNumber.charAt(0)
-    const size = unit.dimensions
-
-    if (!acc[building]) {
-      acc[building] = {}
-    }
-    if (!acc[building][size]) {
-      acc[building][size] = 0
-    }
-    acc[building][size] += 1
-    return acc
-  }, {})
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
@@ -112,37 +65,37 @@ const Pricing = () => {
             subtitle=""
           >
             <OfferList
-              text={`10' x 10' ${"   "}(${groupedUnits["A"]?.["10' x 10'"] || 0} vacant)`}
+              text="10' x 10'"
               status="active"
-              price={isMonthly ? "99" : "1,188"}
+              price={isMonthly ? "110" : "1,320"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`12' x 20' ${"   "}(${groupedUnits["A"]?.["12' x 20'"] || 0} vacant)`}
+              text="12' x 20'"
               status="active"
               price={isMonthly ? "180" : "2,160"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`12' x 25' ${"   "}(${groupedUnits["A"]?.["12' x 25'"] || 0} vacant)`}
+              text="12' x 25'"
               status="active"
               price={isMonthly ? "225" : "2,700"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`12' x 30' ${"   "}(${groupedUnits["A"]?.["12' x 30'"] || 0} vacant)`}
+              text="12' x 30'"
               status="active"
               price={isMonthly ? "270" : "3,240"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`12' x 35' ${"   "}(${groupedUnits["A"]?.["12' x 35'"] || 0} vacant)`}
+              text="12' x 35'"
               status="inactive"
               price={isMonthly ? "315" : "3,780"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`12' x 40' ${"   "}(${groupedUnits["A"]?.["12' x 40'"] || 0} vacant)`}
+              text="12' x 40'"
               status="inactive"
               price={isMonthly ? "360" : "4,320"}
               isMonthly={isMonthly}
@@ -155,25 +108,25 @@ const Pricing = () => {
             subtitle=""
           >
             <OfferList
-              text={`10' x 10' ${"   "}(${groupedUnits["B"]?.["10' x 10'"] || 0} vacant)`}
+              text="10' x 10'"
               status="active"
-              price={isMonthly ? "99" : "1,188"}
+              price={isMonthly ? "110" : "1,320"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`14' x 24.4' ${"   "}(${groupedUnits["B"]?.["14' x 24.4'"] || 0} vacant)`}
+              text="14' x 24.4'"
               status="active"
               price={isMonthly ? "220" : "2,640"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`14' x 29' ${"   "}(${groupedUnits["B"]?.["14' x 29'"] || 0} vacant)`}
+              text="14' x 29'"
               status="active"
               price={isMonthly ? "261" : "3,132"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`14' x 33.5' ${"   "}(${groupedUnits["B"]?.["14' x 33.5'"] || 0} vacant)`}
+              text="14' x 33.5'"
               status="active"
               price={isMonthly ? "302" : "3,624"}
               isMonthly={isMonthly}
@@ -186,13 +139,13 @@ const Pricing = () => {
             subtitle=""
           >
             <OfferList
-              text={`14' x 19' ${"   "}(${groupedUnits["C"]?.["14' x 19'"] || 0} vacant)`}
+              text="14' x 19'"
               status="active"
               price={isMonthly ? "171" : "2,052"}
               isMonthly={isMonthly}
             />
             <OfferList
-              text={`14' x 38.6' ${"   "}(${groupedUnits["C"]?.["14' x 38.6'"] || 0} vacant)`}
+              text="14' x 38.6'"
               status="active"
               price={isMonthly ? "347" : "4,164"}
               isMonthly={isMonthly}
