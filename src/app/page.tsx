@@ -19,6 +19,7 @@ import { Metadata } from "next"
 import React from "react"
 import axios from "axios"
 import { ToyLockerUnit } from "./models/ToyLockerUnit"
+import Location from "@/components/Location"
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <Pricing />
       <Features />
       <Testimonials />
+      <Location />
       <AboutSectionTwo />
       {/* 
       <Brands />

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 const AboutSectionTwo = () => {
   return (
@@ -11,7 +11,7 @@ const AboutSectionTwo = () => {
               data-wow-delay=".15s"
             >
               <Image
-                src="/images/about/car_unit.jpg"
+                src="/images/about/car_unit_2.jpg"
                 alt="A Corvette in a Storage Unit"
                 width={649} // Original width of the image
                 height={487} // Original height of the image
@@ -19,7 +19,7 @@ const AboutSectionTwo = () => {
                 className="dark:hidden dark:drop-shadow-none drop-shadow-three"
               />
               <Image
-                src="/images/about/car_unit.jpg"
+                src="/images/about/car_unit_2.jpg"
                 alt="A Corvette in a Storage Unit"
                 width={649} // Original width of the image
                 height={487} // Original height of the image
@@ -66,7 +66,7 @@ const AboutSectionTwo = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutSectionTwo;
+export default AboutSectionTwo

@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from "next/link"
+import Image from "next/image"
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 z-[-1]">
           <Image
-            src="/images/hero/tl_drone.png" // Adjust the path to your image
+            src="/images/hero/tl_drone_2.png" // Adjust the path to your image
             alt="Arial view of Toy Locker, LLC storage facility"
             layout="fill"
             objectFit="cover"
@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
