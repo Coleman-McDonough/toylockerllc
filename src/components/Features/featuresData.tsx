@@ -1,4 +1,4 @@
-import { Feature } from "@/types/feature";
+import { Feature } from "@/types/feature"
 
 const featuresData: Feature[] = [
   {
@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "Structural Steel",
     paragraph:
-      "The Toy Locker, LLC's buildings are framed and roofed with industrial grade metal ensuring safety of unit contents. They also feature a weather tight seal.",
+      "At Toy Locker, LLC, our RV storage, boat storage, camper storage, and self-storage units are built with industrial-grade metal framing and roofing. This ensures the safety and security of your stored items. Our storage units also feature weather-tight seals, providing an extra layer of protection against the elements.",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
     ),
     title: "Heavy Duty Foundation",
     paragraph:
-      "The foundations of Toy Locker, LLC's buildings were poured with high grade material, allowing for maximum weight capacity.",
+      "Toy Locker, LLC's RV storage, boat storage, camper storage, and self-storage units are constructed on heavy-duty foundations. These foundations are poured with high-grade materials, allowing for maximum weight capacity and ensuring the stability and durability of our storage facilities.",
   },
   {
     id: 1,
@@ -44,7 +44,7 @@ const featuresData: Feature[] = [
     ),
     title: "Expansive Dimensions",
     paragraph:
-      "The inside of units have 14ft wide bays with 16ft high ceilings! Our unit layout dimensions can also be customized to accommodate specific needs.",
+      "Our storage units at Toy Locker, LLC offer expansive dimensions, with 14-foot wide bays and 16-foot high ceilings. These spacious units are perfect for RV storage, boat storage, camper storage, and self-storage. Additionally, we offer customizable unit layout dimensions to meet your specific storage needs.",
   },
-];
-export default featuresData;
+]
+export default featuresData
