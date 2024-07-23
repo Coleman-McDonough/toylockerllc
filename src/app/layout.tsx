@@ -30,20 +30,29 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-JPLT2S32BJ');
-            `,
+      (function() {
+        var gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-JPLT2S32BJ';
+        document.head.appendChild(gtagScript);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JPLT2S32BJ');
+      })();
+    `,
           }}
         />
+
         <meta
           property="og:title"
-          content="Toy Locker, LLC | 16 Foot Storage Units in NH"
+          content="RV Storage, Boat Storage, Camper Storage in New Hampshire | Toy Locker, LLC
+"
         />
         <meta
           property="og:description"
-          content="Toy Locker, LLC in Ossipee, NH. Our 16 foot tall storage units, ideal for RVs and boats, are conveniently located on Route 16. Contact us at 978-375-7001"
+          content="Toy Locker, LLC offers the tallest storage units in New Hampshire, perfect for RV, boat, and camper storage. Contact us for secure and affordable storage solutions."
         />
         <meta
           property="og:image"
@@ -52,9 +61,13 @@ export default function RootLayout({
         <meta property="og:url" content="https://www.toylocker.llc/" />
         <meta
           name="twitter:title"
-          content="Toy Locker, LLC | 16 Foot Storage Units in NH"
+          content="RV Storage, Boat Storage, Camper Storage in New Hampshire | Toy Locker, LLC
+"
         />
-        <meta name="twitter:description" content="Add description here" />
+        <meta
+          name="twitter:description"
+          content="Toy Locker, LLC offers the tallest storage units in New Hampshire, perfect for RV, boat, and camper storage. Contact us for secure and affordable storage solutions."
+        />
         <meta
           name="twitter:url"
           content="https://www.toylocker.llc/images/about/car_unit_2.jpg"

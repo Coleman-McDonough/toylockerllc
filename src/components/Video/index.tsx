@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
+import Image from "next/image"
+import { useState } from "react"
+import SectionTitle from "../Common/SectionTitle"
 
-import ModalVideo from "react-modal-video";
+import ModalVideo from "react-modal-video"
 
 const Video = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false)
 
   return (
     <section className="relative z-10 py-8 lg:py-12">
@@ -28,7 +28,7 @@ const Video = () => {
               <div className="relative aspect-[77/40] items-center justify-center">
                 <Image
                   src="/images/video/row1.jpg"
-                  alt="Image for Drone Footage"
+                  alt="Aerial view of Toy Locker, LLC's RV and boat storage facility in New Hampshire"
                   fill
                 />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
@@ -64,7 +64,7 @@ const Video = () => {
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
     </section>
-  );
-};
+  )
+}
 
-export default Video;
+export default Video

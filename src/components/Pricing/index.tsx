@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph=""
+          title="Our Storage Units"
+          paragraph="We provide various storage unit sizes to accommodate your needs, whether you're looking for RV storage, boat storage, camper storage, or general self-storage. Our units are 16 feet tall, providing ample space for all your storage requirements."
           center
           width="665px"
         />

@@ -1,7 +1,8 @@
 export const metadata: Metadata = {
-  title: "Toy Locker, LLC | 16 Foot Storage Units in NH",
+  title:
+    "RV Storage, Boat Storage, Camper Storage in New Hampshire | Toy Locker, LLC",
   description:
-    "Toy Locker, LLC in Ossipee, NH. Our 16 foot tall storage units, ideal for RVs and boats, are conveniently located on Route 16. Contact us at 978-375-7001 ",
+    "Toy Locker, LLC offers the tallest storage units in New Hampshire, perfect for RV, boat, and camper storage. Contact us for secure and affordable storage solutions.",
   // other metadata
 }
 import AboutSectionOne from "@/components/About/AboutSectionOne"
