@@ -1,8 +1,7 @@
 export const metadata: Metadata = {
-  title:
-    "RV Storage, Boat Storage, Camper Storage in New Hampshire | Toy Locker, LLC",
+  title: "Self Storage for Your Boat or RV in Ossipee NH | Toy Locker LLC",
   description:
-    "Toy Locker, LLC offers the tallest storage units in New Hampshire, perfect for RV, boat, and camper storage. Contact us for secure and affordable storage solutions.",
+    "Toy Locker, LLC offers the tallest self storage units in NH, perfect for RV, boat, and camper storage. Call us for secure and affordable storage solutions.",
   // other metadata
 }
 import AboutSectionOne from "@/components/About/AboutSectionOne"

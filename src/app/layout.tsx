@@ -47,12 +47,12 @@ export default function RootLayout({
 
         <meta
           property="og:title"
-          content="RV Storage, Boat Storage, Camper Storage in New Hampshire | Toy Locker, LLC
+          content="Self Storage for Your Boat or RV in Ossipee NH | Toy Locker LLC
 "
         />
         <meta
           property="og:description"
-          content="Toy Locker, LLC offers the tallest storage units in New Hampshire, perfect for RV, boat, and camper storage. Contact us for secure and affordable storage solutions."
+          content="Toy Locker, LLC offers the tallest self storage units in NH, perfect for RV, boat, and camper storage. Call us for secure and affordable storage solutions."
         />
         <meta
           property="og:image"
@@ -61,12 +61,12 @@ export default function RootLayout({
         <meta property="og:url" content="https://www.toylocker.llc/" />
         <meta
           name="twitter:title"
-          content="RV Storage, Boat Storage, Camper Storage in New Hampshire | Toy Locker, LLC
+          content="Self Storage for Your Boat or RV in Ossipee NH | Toy Locker LLC
 "
         />
         <meta
           name="twitter:description"
-          content="Toy Locker, LLC offers the tallest storage units in New Hampshire, perfect for RV, boat, and camper storage. Contact us for secure and affordable storage solutions."
+          content="Toy Locker, LLC offers the tallest self storage units in NH, perfect for RV, boat, and camper storage. Call us for secure and affordable storage solutions."
         />
         <meta
           name="twitter:url"
