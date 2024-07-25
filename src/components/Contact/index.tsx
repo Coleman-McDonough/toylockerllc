@@ -121,7 +121,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         rows={5}
-                        placeholder="Enter your Message"
+                        placeholder="What can we help you store?"
                         className="border-stroke dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
                       ></textarea>
                     </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                       className="dark:shadow-submit-dark rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90"
                       disabled={status === "Sending..."} // Disable button while sending
                     >
-                      {status === "Sending..." ? "Sending..." : "Submit Ticket"}{" "}
+                      {status === "Sending..." ? "Sending..." : "Submit"}{" "}
                       {/* Change button text based on status */}
                     </button>
                   </div>

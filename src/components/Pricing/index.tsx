@@ -62,7 +62,7 @@ const Pricing = () => {
             packageName="Building A"
             price={isMonthly ? "40" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle=""
+            subtitle="12' x 12' Doors"
           >
             <OfferList
               text="10' x 10'"
@@ -105,7 +105,7 @@ const Pricing = () => {
             packageName="Building B"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle=""
+            subtitle="14' x 14' Doors"
           >
             <OfferList
               text="10' x 10'"
@@ -136,7 +136,7 @@ const Pricing = () => {
             packageName="Building C"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle=""
+            subtitle="14' x 14' Doors"
           >
             <OfferList
               text="14' x 19'"
