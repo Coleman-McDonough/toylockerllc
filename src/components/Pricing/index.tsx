@@ -67,7 +67,7 @@ const Pricing = () => {
             <OfferList
               text="10' x 10'"
               status="active"
-              price={isMonthly ? "110" : "1,320"}
+              price={isMonthly ? "115" : "1,380"}
               isMonthly={isMonthly}
             />
             <OfferList
@@ -110,7 +110,7 @@ const Pricing = () => {
             <OfferList
               text="10' x 10'"
               status="active"
-              price={isMonthly ? "110" : "1,320"}
+              price={isMonthly ? "115" : "1,380"}
               isMonthly={isMonthly}
             />
             <OfferList
