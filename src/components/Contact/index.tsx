@@ -6,6 +6,7 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    phone: "",
   })
   const [status, setStatus] = useState("") // State for form submission status
   const [errorMessage, setErrorMessage] = useState("") // State for error message
@@ -38,7 +39,7 @@ const Contact = () => {
         setSuccessMessage(
           "Your message has been sent successfully! We'll get back to you ASAP.",
         )
-        setFormData({ name: "", email: "", message: "" }) // Reset form fields
+        setFormData({ name: "", email: "", message: "", phone: "" }) // Reset form fields
       } else {
         setStatus("") // Clear status
         setErrorMessage(
@@ -91,6 +92,25 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label
+                        htmlFor="phone"
+                        className="dark:text-white mb-3 block text-sm font-medium text-dark"
+                      >
+                        Your Phone Number
+                      </label>
+                      <input
+                        type="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Enter your phone number"
+                        className="border-stroke dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="w-full px-4">
                     <div className="mb-8">
                       <label
                         htmlFor="email"

@@ -1,9 +1,9 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { NextResponse } from "next/server"
+import nodemailer from "nodemailer"
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, message, phone } = await request.json()
 
     const transporter = nodemailer.createTransport({
       host: "live.smtp.mailtrap.io",
@@ -12,32 +12,32 @@ export async function POST(request: Request) {
         user: process.env.MAILTRAP_USER,
         pass: process.env.MAILTRAP_PASS,
       },
-    });
+    })
 
     const mailOptions = {
       from: `Toy Locker Email <emailer@toylocker.llc>`,
       to: process.env.EMAIL_TO,
       subject: `Toy Locker message from ${name}`,
       text: message,
-      html: `<p>You have a new message from the Toy Locker website</p><p><strong>Name: </strong> ${name}</p><p><strong>Email: </strong> ${email}</p><p><strong>Message: </strong> ${message}</p>`,
-    };
+      html: `<p>You have a new message from the Toy Locker website</p><p><strong>Name: </strong> ${name}</p><p><strong>Email: </strong> ${email}</p><p><strong>Phone Number: </strong> ${phone}</p><p><strong>Message: </strong> ${message}</p>`,
+    }
 
     try {
-      const info = await transporter.sendMail(mailOptions);
-      console.log("Email sent: ", info.response);
-      return NextResponse.json({ success: true });
+      const info = await transporter.sendMail(mailOptions)
+      console.log("Email sent: ", info.response)
+      return NextResponse.json({ success: true })
     } catch (error) {
-      console.error("Error sending email: ", error);
+      console.error("Error sending email: ", error)
       return NextResponse.json(
         { error: "Error sending email", details: error.message },
         { status: 500 },
-      );
+      )
     }
   } catch (error) {
-    console.error("Error parsing request body: ", error);
+    console.error("Error parsing request body: ", error)
     return NextResponse.json(
       { error: "Error parsing request body", details: error.message },
       { status: 500 },
-    );
+    )
   }
 }
