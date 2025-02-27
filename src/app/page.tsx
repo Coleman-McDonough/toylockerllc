@@ -20,10 +20,12 @@ import React from "react"
 import axios from "axios"
 import { ToyLockerUnit } from "./models/ToyLockerUnit"
 import Location from "@/components/Location"
+import VisitorTracker from "@/components/VisitorTracker"
 
 export default function Home() {
   return (
     <>
+      <VisitorTracker />
       <ScrollUp />
       <Hero />
       <Video />
