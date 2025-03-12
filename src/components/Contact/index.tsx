@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react"
+import HCaptcha from "react-hcaptcha"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Contact = () => {
   const [status, setStatus] = useState("") // State for form submission status
   const [errorMessage, setErrorMessage] = useState("") // State for error message
   const [successMessage, setSuccessMessage] = useState("") // State for success message
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -24,13 +26,23 @@ const Contact = () => {
     setErrorMessage("") // Reset error message
     setSuccessMessage("") // Reset success message
 
+    // Check if hCaptcha is completed
+
+    if (!captchaToken) {
+      setStatus("")
+
+      setErrorMessage("Please complete the CAPTCHA.")
+
+      return
+    }
+
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, captchaToken }),
       })
 
       const result = await response.json()
@@ -146,6 +158,15 @@ const Contact = () => {
                       ></textarea>
                     </div>
                   </div>
+
+                  {/* hCaptcha Field */}
+                  <div className="mt-6 flex justify-center">
+                    <HCaptcha
+                      sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY!}
+                      onVerify={(token) => setCaptchaToken(token)}
+                    />
+                  </div>
+
                   <div className="w-full px-4">
                     <button
                       type="submit"
