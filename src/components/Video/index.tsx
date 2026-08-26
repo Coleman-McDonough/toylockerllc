@@ -58,6 +58,7 @@ const Video = () => {
         channel="youtube"
         autoplay={true}
         start={true}
+        ratio="16:9"
         isOpen={isOpen}
         videoId="U9sI1eHlzfA"
         onClose={() => setOpen(false)}
