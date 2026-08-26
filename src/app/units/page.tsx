@@ -1,5 +1,3 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact from "@/components/Contact";
 import Pricing from "@/components/Pricing";
 
 import { Metadata } from "next";
