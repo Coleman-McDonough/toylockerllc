@@ -1,5 +1,5 @@
 
-import Link from "next/link";
+import SiteLink from "@/components/Common/SiteLink";
 
 const Breadcrumb = ({
   pageName,
@@ -27,12 +27,12 @@ const Breadcrumb = ({
               <div className="text-end">
                 <ul className="flex items-center md:justify-end">
                   <li className="flex items-center">
-                    <Link
+                    <SiteLink
                       href="/"
                       className="pr-1 text-base font-medium text-body-color hover:text-primary"
                     >
                       Home
-                    </Link>
+                    </SiteLink>
                     <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
                   </li>
                   <li className="text-base font-medium text-primary">

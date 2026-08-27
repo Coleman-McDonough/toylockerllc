@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import SiteLink from "../Common/SiteLink"
 import ThemeToggler from "./ThemeToggler"
 import menuData from "./menuData"
 
@@ -47,7 +47,7 @@ const Header = () => {
       <div className="container">
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-60 max-w-full px-4 xl:mr-12">
-            <Link
+            <SiteLink
               href="/"
               className={`header-logo block w-full ${
                 sticky ? "py-5 lg:py-2" : "py-8"
@@ -67,7 +67,7 @@ const Header = () => {
                 height={30}
                 className="dark:block hidden w-full"
               />
-            </Link>
+            </SiteLink>
           </div>
           <div className="flex w-full items-center justify-between px-4">
             <div>
@@ -113,7 +113,7 @@ const Header = () => {
                             {menuItem.title}
                           </a>
                         ) : (
-                          <Link
+                          <SiteLink
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               pathname === menuItem.path
@@ -122,7 +122,7 @@ const Header = () => {
                             }`}
                           >
                             {menuItem.title}
-                          </Link>
+                          </SiteLink>
                         )
                       ) : (
                         <>
@@ -148,13 +148,13 @@ const Header = () => {
                             }`}
                           >
                             {menuItem.submenu?.map((submenuItem, subIndex) => (
-                              <Link
+                              <SiteLink
                                 href={submenuItem.path || "/"}
                                 key={subIndex}
                                 className="dark:text-white/70 dark:hover:text-white block rounded py-2.5 text-sm text-dark hover:text-primary lg:px-3"
                               >
                                 {submenuItem.title}
-                              </Link>
+                              </SiteLink>
                             ))}
                           </div>
                         </>

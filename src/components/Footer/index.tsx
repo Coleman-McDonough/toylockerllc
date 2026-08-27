@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import SiteLink from "../Common/SiteLink";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-1 inline-block">
+                <SiteLink href="/" className="mb-1 inline-block">
                   <Image
                     src="/images/logo/toy_locker_logo_3.png"
                     alt="Toy Locker Logo"
@@ -25,7 +25,7 @@ const Footer = () => {
                     width={140}
                     height={30}
                   />
-                </Link>
+                </SiteLink>
                 <p className="dark:text-body-color-dark text-base leading-relaxed text-body-color">
                   1650 Route 16
                 </p>
@@ -125,20 +125,20 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <Link
+                    <SiteLink
                       href="/units"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       Units
-                    </Link>
+                    </SiteLink>
                   </li>
                   <li>
-                    <Link
+                    <SiteLink
                       href="/contact"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       Contact Us
-                    </Link>
+                    </SiteLink>
                   </li>
                 </ul>
               </div>
