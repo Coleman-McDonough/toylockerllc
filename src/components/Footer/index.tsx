@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import SiteLink from "../Common/SiteLink";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <SiteLink href="/" className="mb-1 inline-block">
+                <Link href="/" className="mb-1 inline-block">
                   <Image
                     src="/images/logo/toy_locker_logo_3.png"
                     alt="Toy Locker Logo"
@@ -25,7 +25,7 @@ const Footer = () => {
                     width={140}
                     height={30}
                   />
-                </SiteLink>
+                </Link>
                 <p className="dark:text-body-color-dark text-base leading-relaxed text-body-color">
                   1650 Route 16
                 </p>
@@ -33,12 +33,12 @@ const Footer = () => {
                   Ossipee, NH 03814
                 </p>
 
-                <a
-                  href="tel:+1-978-375-7001"
+                <Link
+                  href="/units"
                   className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color"
                 >
                   (978)-375-7001
-                </a>
+                </Link>
                 <div className="mt-3 flex items-center">
                   <a
                     href="https://www.facebook.com/profile.php?id=61560185360850"
@@ -125,20 +125,20 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <SiteLink
+                    <Link
                       href="/units"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       Units
-                    </SiteLink>
+                    </Link>
                   </li>
                   <li>
-                    <SiteLink
+                    <Link
                       href="/contact"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       Contact Us
-                    </SiteLink>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -151,20 +151,20 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <a
+                    <Link
                       href="https://www.cpmcdonoughconstructioncorp.com/"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       CPM Construction Corp
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="https://www.cpmcdonoughconcretedisposal.com/"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       CPM Concrete Disposal
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -177,20 +177,20 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <a
+                    <Link
                       href="https://www.loamdepot.com/"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       Loam Depot
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="https://www.snhindustrialpark.com/"
                       className="dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base text-body-color duration-300 hover:text-primary"
                     >
                       SNH Industrial Park
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

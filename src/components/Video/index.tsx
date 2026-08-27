@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useState } from "react"
 import SectionTitle from "../Common/SectionTitle"
 
-const VIDEO_ID = "U9sI1eHlzfA"
+import ModalVideo from "react-modal-video"
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false)
@@ -21,7 +21,10 @@ const Video = () => {
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto max-w-[770px] overflow-hidden rounded-md">
+            <div
+              className="mx-auto max-w-[770px] overflow-hidden rounded-md"
+              data-wow-delay=".15s"
+            >
               <div className="relative aspect-[77/40] items-center justify-center">
                 <Image
                   src="/images/video/row1.jpg"
@@ -30,8 +33,7 @@ const Video = () => {
                 />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
                   <button
-                    type="button"
-                    aria-label="Play facility video"
+                    aria-label="video play button"
                     onClick={() => setOpen(true)}
                     className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
                   >
@@ -51,28 +53,14 @@ const Video = () => {
         </div>
       </div>
 
-      {isOpen ? (
-        <div
-          className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setOpen(false)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Facility video"
-        >
-          <div
-            className="relative aspect-video w-full max-w-3xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <iframe
-              className="h-full w-full rounded-md"
-              src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1`}
-              title="Toy Locker facility video"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      ) : null}
+      <ModalVideo
+        channel="youtube"
+        autoplay={true}
+        start={true}
+        isOpen={isOpen}
+        videoId="U9sI1eHlzfA"
+        onClose={() => setOpen(false)}
+      />
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
     </section>

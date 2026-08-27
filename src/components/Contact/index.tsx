@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react"
-import CaptchaField from "./CaptchaField"
+import HCaptcha from "react-hcaptcha"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -161,7 +161,10 @@ const Contact = () => {
 
                   {/* hCaptcha Field */}
                   <div className="mt-6 flex justify-center">
-                    <CaptchaField onVerify={(token) => setCaptchaToken(token)} />
+                    <HCaptcha
+                      sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY!}
+                      onVerify={(token) => setCaptchaToken(token)}
+                    />
                   </div>
 
                   <div className="w-full px-4">

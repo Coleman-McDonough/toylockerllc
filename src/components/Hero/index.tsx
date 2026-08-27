@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 
 const Hero = () => {
@@ -9,12 +10,12 @@ const Hero = () => {
       >
         <div className="absolute inset-0 z-[-1]">
           <Image
-            src="/images/hero/tl_drone_2.png"
-            alt="Aerial view of Toy Locker, LLC storage facility"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top"
+            src="/images/hero/tl_drone_2.png" // Adjust the path to your image
+            alt="Arial view of Toy Locker, LLC storage facility"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+            quality={100} // Optional: Adjust quality as needed
           />
         </div>
         <div className="relative z-10">
@@ -35,12 +36,13 @@ const Hero = () => {
                     availability.
                   </p>
                   <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                    <a
+                    <Link
+                      // Link to a phone number
                       href="tel:978-375-7001"
                       className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                     >
                       Call Now!
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

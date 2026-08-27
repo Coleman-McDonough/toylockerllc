@@ -1,3 +1,5 @@
+import Breadcrumb from "@/components/Common/Breadcrumb";
+import Contact from "@/components/Contact";
 import Pricing from "@/components/Pricing";
 
 import { Metadata } from "next";
@@ -9,10 +11,18 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-export default function UnitsPage() {
+const ContactPage = () => {
   return (
-    <div className="pt-20 md:pt-24">
+    <>
+      {/*
+      <Breadcrumb
+        pageName="Storage Units"
+        description="New Hampshire's Tallest, Most Affordable Storage Units - Secure Your Space Today!"
+      />
+       */}
       <Pricing />
-    </div>
-  )
-}
+    </>
+  );
+};
+
+export default ContactPage;
