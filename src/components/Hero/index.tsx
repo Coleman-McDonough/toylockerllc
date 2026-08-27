@@ -9,12 +9,12 @@ const Hero = () => {
       >
         <div className="absolute inset-0 z-[-1]">
           <Image
-            src="/images/hero/tl_drone_2.png" // Adjust the path to your image
-            alt="Arial view of Toy Locker, LLC storage facility"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top"
-            quality={100} // Optional: Adjust quality as needed
+            src="/images/hero/tl_drone_2.png"
+            alt="Aerial view of Toy Locker, LLC storage facility"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top"
           />
         </div>
         <div className="relative z-10">

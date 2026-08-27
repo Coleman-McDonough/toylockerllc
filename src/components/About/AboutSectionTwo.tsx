@@ -13,18 +13,16 @@ const AboutSectionTwo = () => {
               <Image
                 src="/images/about/car_unit_2.jpg"
                 alt="A Corvette in a Storage Unit"
-                width={649} // Original width of the image
-                height={487} // Original height of the image
-                layout="responsive"
-                className="dark:hidden dark:drop-shadow-none drop-shadow-three"
+                width={649}
+                height={487}
+                className="dark:hidden dark:drop-shadow-none h-auto w-full drop-shadow-three"
               />
               <Image
                 src="/images/about/car_unit_2.jpg"
                 alt="A Corvette in a Storage Unit"
-                width={649} // Original width of the image
-                height={487} // Original height of the image
-                layout="responsive"
-                className="dark:block dark:drop-shadow-none hidden drop-shadow-three"
+                width={649}
+                height={487}
+                className="dark:block dark:drop-shadow-none hidden h-auto w-full drop-shadow-three"
               />
             </div>
           </div>

@@ -15,26 +15,26 @@ export default function GlobalError({
       error?.digest,
       error,
     )
-    if (
-      error?.digest === "BAILOUT_TO_CLIENT_SIDE_RENDERING" ||
-      error?.digest === "NEXT_NOT_FOUND" ||
-      error?.digest === "NEXT_REDIRECT"
-    ) {
-      return
-    }
-    const key = `tl-recover:${window.location.pathname}`
-    if (sessionStorage.getItem(key) === "1") return
-    sessionStorage.setItem(key, "1")
-    window.location.replace(window.location.href)
   }, [error])
 
   return (
     <html lang="en">
       <body className="bg-[#FCFCFC] px-4 py-28 text-center">
-        <h1 className="mb-4 text-2xl font-bold text-black">Loading…</h1>
-        <p className="text-base text-[#637381]">
-          If this does not continue, call (978) 375-7001.
+        <h1 className="mb-4 text-2xl font-bold text-black">
+          This page did not finish loading
+        </h1>
+        <p className="mb-8 text-base text-[#637381]">
+          Reload it and try the menu again.
         </p>
+        <button
+          type="button"
+          onClick={() => {
+            window.location.assign(window.location.pathname)
+          }}
+          className="rounded-sm bg-[#063646] px-8 py-3 text-base font-medium text-white"
+        >
+          Reload page
+        </button>
       </body>
     </html>
   )
