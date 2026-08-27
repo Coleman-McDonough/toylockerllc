@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import SiteLink from "@/components/Common/SiteLink";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
@@ -24,7 +24,8 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -50,7 +51,7 @@ const Header = () => {
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
+              <SiteLink
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
@@ -70,7 +71,7 @@ const Header = () => {
                   height={30}
                   className="dark:block hidden w-full"
                 />
-              </Link>
+              </SiteLink>
             </div>
             <div className="flex w-full items-center justify-between px-4">
               <div>
@@ -108,7 +109,7 @@ const Header = () => {
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
-                          <Link
+                          <SiteLink
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
@@ -117,7 +118,7 @@ const Header = () => {
                             }`}
                           >
                             {menuItem.title}
-                          </Link>
+                          </SiteLink>
                         ) : (
                           <>
                             <p
@@ -142,13 +143,13 @@ const Header = () => {
                               }`}
                             >
                               {menuItem.submenu.map((submenuItem, index) => (
-                                <Link
+                                <SiteLink
                                   href={submenuItem.path}
                                   key={index}
                                   className="dark:text-white/70 dark:hover:text-white block rounded py-2.5 text-sm text-dark hover:text-primary lg:px-3"
                                 >
                                   {submenuItem.title}
-                                </Link>
+                                </SiteLink>
                               ))}
                             </div>
                           </>
@@ -158,22 +159,22 @@ const Header = () => {
                   </ul>
 
                   <div className="flex flex-col">
-                    <Link
+                    <SiteLink
                       href="https://snhindustrialpark.managebuilding.com/Resident/public/home"
                       className="ease-in-up rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:hidden md:px-9 lg:px-6 xl:px-9"
                     >
                       Tenant Portal
-                    </Link>
+                    </SiteLink>
                   </div>
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
+                <SiteLink
                   href="https://snhindustrialpark.managebuilding.com/Resident/public/home"
                   className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Tenant Portal
-                </Link>
+                </SiteLink>
                 <div>
                   <ThemeToggler />
                 </div>

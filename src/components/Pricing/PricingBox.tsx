@@ -1,3 +1,4 @@
+"use client"
 const PricingBox = (props: {
   price: string;
   duration: string;
