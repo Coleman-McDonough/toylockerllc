@@ -9,18 +9,10 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ContactPage = () => {
+export default function UnitsPage() {
   return (
-    <>
-      {/*
-      <Breadcrumb
-        pageName="Storage Units"
-        description="New Hampshire's Tallest, Most Affordable Storage Units - Secure Your Space Today!"
-      />
-       */}
+    <div className="pt-20 md:pt-24">
       <Pricing />
-    </>
-  );
-};
-
-export default ContactPage;
+    </div>
+  )
+}
