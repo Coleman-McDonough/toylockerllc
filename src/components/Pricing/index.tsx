@@ -67,37 +67,37 @@ const Pricing = () => {
             <OfferList
               text="10' x 10'"
               status="active"
-              price={isMonthly ? "115" : "1,380"}
+              price={isMonthly ? "125" : "1,500"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="12' x 20'"
               status="active"
-              price={isMonthly ? "180" : "2,160"}
+              price={isMonthly ? "200" : "2,400"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="12' x 25'"
               status="active"
-              price={isMonthly ? "225" : "2,700"}
+              price={isMonthly ? "250" : "3,000"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="12' x 30'"
               status="active"
-              price={isMonthly ? "270" : "3,240"}
+              price={isMonthly ? "300" : "3,600"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="12' x 35'"
               status="inactive"
-              price={isMonthly ? "315" : "3,780"}
+              price={isMonthly ? "350" : "4,200"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="12' x 40'"
               status="inactive"
-              price={isMonthly ? "360" : "4,320"}
+              price={isMonthly ? "400" : "4,800"}
               isMonthly={isMonthly}
             />
           </PricingBox>
@@ -110,25 +110,25 @@ const Pricing = () => {
             <OfferList
               text="10' x 10'"
               status="active"
-              price={isMonthly ? "115" : "1,380"}
+              price={isMonthly ? "125" : "1,500"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="14' x 24.4'"
               status="active"
-              price={isMonthly ? "220" : "2,640"}
+              price={isMonthly ? "244" : "2,928"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="14' x 29'"
               status="active"
-              price={isMonthly ? "261" : "3,132"}
+              price={isMonthly ? "290" : "3,480"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="14' x 33.5'"
               status="active"
-              price={isMonthly ? "302" : "3,624"}
+              price={isMonthly ? "335" : "4,020"}
               isMonthly={isMonthly}
             />
           </PricingBox>
@@ -141,13 +141,13 @@ const Pricing = () => {
             <OfferList
               text="14' x 19'"
               status="active"
-              price={isMonthly ? "171" : "2,052"}
+              price={isMonthly ? "190" : "2,280"}
               isMonthly={isMonthly}
             />
             <OfferList
               text="14' x 38.6'"
               status="active"
-              price={isMonthly ? "347" : "4,164"}
+              price={isMonthly ? "386" : "4,632"}
               isMonthly={isMonthly}
             />
           </PricingBox>
